@@ -27,6 +27,7 @@ public class HelloService {
         return true;
     }
 
+    // user.id | #result.id都可以
     @CachePut(value = "getUser", key = "#root.args[0].id")
     public User putUser(User user) {
         System.out.println("访问服务层更新：id = " + user.getId());
